@@ -1,18 +1,51 @@
-.container {
+/* Universal font and styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container styling */
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+/* Section spacing */
+section {
+  padding: 60px 0;
+}
+
+.section-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Logo styling */
 .Logo {
   margin-right: 10px;
 }
 
+/* Main photo styling */
 .MainPhoto {
   border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Feature icons */
 .feature-icon {
   width: 4rem;
   height: 4rem;
   border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-icon img {
@@ -31,12 +64,31 @@
   background-color: rgb(252, 150, 8) !important;
 }
 
-/* Testimonials */
+/* Pricing section */
+.pricing-header {
+  margin-bottom: 2rem;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FAQ section */
+.faq-section {
+  border-radius: 15px;
+  padding: 3rem;
+  margin: 3rem 0;
+}
+
 /* Testimonials */
 .testimonials-container {
   max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
 .testimonials-heading {
@@ -67,8 +119,8 @@
 }
 
 .profile-img-container {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
@@ -111,7 +163,12 @@
   margin-left: 5px;
 }
 
-/* Make testimonials responsive */
+/* Footer styling */
+footer {
+  padding: 30px 0;
+}
+
+/* Make everything responsive */
 @media (max-width: 768px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
@@ -120,5 +177,9 @@
   .testimonial-card {
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  .section-heading {
+    font-size: 2rem;
   }
 }
