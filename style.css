@@ -1,0 +1,16 @@
+.container {
+}
+
+.Logo {
+  margin-right: 10px;
+}
+
+.MainPhoto {
+  border-radius: 25px;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
