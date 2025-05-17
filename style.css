@@ -14,3 +14,21 @@
   height: 4rem;
   border-radius: 0.75rem;
 }
+
+.feature-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.icon1 {
+  background-color: rgb(255, 85, 113) !important;
+}
+
+.icon2 {
+  background-color: rgb(20, 178, 20) !important;
+}
+
+.icon3 {
+  background-color: rgb(252, 150, 8) !important;
+}
+
+/* Testimonials */
