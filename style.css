@@ -182,4 +182,19 @@ footer {
   .section-heading {
     font-size: 2rem;
   }
+  .Centre {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .card {
+    min-width: 410px;
+  }
+
+  .MainButton {
+    max-width: 280px !important;
+  }
+  .button-group {
+    justify-content: center !important;
+  }
 }
