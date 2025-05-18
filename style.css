@@ -185,6 +185,7 @@ footer {
   .Centre {
     display: flex !important;
     justify-content: center !important;
+    text-align: center;
   }
 
   .card {
