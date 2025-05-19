@@ -204,3 +204,23 @@ audio {
     justify-content: center !important;
   }
 }
+
+@media (max-width: 464px) {
+  .NavIcons {
+    font-size: 0.8rem;
+  }
+
+  .NavLogo {
+    height: 25px;
+    width: 25px;
+  }
+
+  .NavTitle {
+    font-size: 1rem !important;
+  }
+
+  .NavBox {
+    padding-top: 0px;
+    margin-bottom: 0px !important;
+  }
+}
