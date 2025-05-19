@@ -173,6 +173,10 @@ audio {
   margin-top: 1rem;
 }
 
+.NavBox {
+  margin-bottom: 5px !important;
+}
+
 /* Make everything responsive */
 @media (max-width: 768px) {
   .testimonials-grid {
