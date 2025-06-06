@@ -44,6 +44,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Vastu.css" />
 
   </head>
 
@@ -51,48 +52,67 @@
     <!-- Skip to main content for accessibility -->
     <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
     
-    <!-- Nav Bar -->
-    <nav class="NavBox navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container">
-        <header class="NavBox d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom w-100">
-          <a
-            href="#home"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-            aria-label="Vastu Vistar Home"
-          >
-            <img
-              width="35"
-              height="35"
-              class="Logo NavLogo"
-              src="/assets/images/logo.webp"
-              alt="Vastu Vistar Logo"
-            />
-            <span class="fs-4 NavTitle">Vastu Vistar</span>
-          </a>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a href="#home" class="NavIcons nav-link active" aria-current="page">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#features" class="NavIcons nav-link">Features</a>
-            </li>
-            <li class="nav-item">
-              <a href="#pricing" class="NavIcons nav-link">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a href="#testimonials" class="NavIcons nav-link">Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a href="#faqs" class="NavIcons nav-link">FAQs</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a href="#about" class="NavIcons nav-link">About</a>
-            </li> -->
+ <!-- Nav Bar -->
+<!-- Enhanced Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container">
+    <!-- Enhanced Logo - always visible on left -->
+    <a href="#home" class="navbar-brand d-flex align-items-center" aria-label="Vastu Vistar Home">
+      <img
+        width="40"
+        height="40"
+        class="Logo NavLogo"
+        src="/assets/images/logo.webp"
+        alt="Vastu Vistar Logo"
+      />
+      <span class="NavTitle ms-2">Vastu Vistar</span>
+    </a>
 
-          </ul>
-        </header>
-      </div>
-    </nav>
+    <!-- Enhanced Mobile menu toggle button -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enhanced Collapsible navigation menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="#home" class="NavIcons nav-link active" aria-current="page">
+            <i class="fas fa-home me-1" aria-hidden="true"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#features" class="NavIcons nav-link">
+            <i class="fas fa-star me-1" aria-hidden="true"></i>Features
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#pricing" class="NavIcons nav-link">
+            <i class="fas fa-tag me-1" aria-hidden="true"></i>Pricing
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#testimonials" class="NavIcons nav-link">
+            <i class="fas fa-comments me-1" aria-hidden="true"></i>Reviews
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#faqs" class="NavIcons nav-link">
+            <i class="fas fa-question-circle me-1" aria-hidden="true"></i>FAQs
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <!-- Main Content -->
 
@@ -140,34 +160,75 @@
 
 
 
-      <!-- What is Vastu? -->
-      <section id="about" class="my-5">
-        <div class="container col-xxl-8 px-4">
-          <div class="Centre row flex-lg-row align-items-center g-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-              <img
-                src="/assets/images/VastuDeva.webp"
-                class="d-block mx-lg-auto img-fluid MainPhoto"
-                alt="Ancient Vastu Shastra principles represented through traditional imagery"
-                width="700"
-                height="500"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-lg-6">
-              <h2 class="Centre display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                What is Vastu?
-              </h2>
-              <p class="lead">
-                Vastu Shastra is an ancient Indian science of architecture and design that aims to create harmony between your living space and the natural elements. Rooted in centuries of tradition, it provides guidelines for the layout, direction, and structure of buildings to align with the earth’s energies.
+<!-- What is Vastu? - Updated with modal -->
+<section id="about" class="my-5">
+  <div class="container col-xxl-8 px-4">
+    <div class="Centre row flex-lg-row align-items-center g-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img
+          src="/assets/images/VastuDeva.webp"
+          class="d-block mx-lg-auto img-fluid MainPhoto"
+          alt="Ancient Vastu Shastra principles represented through traditional imagery"
+          width="700"
+          height="500"
+          loading="lazy"
+        />
+      </div>
+      <div class="col-lg-6">
+        <h2 class="Centre display-5 fw-bold text-body-emphasis lh-1 mb-3">
+          What is Vastu?
+        </h2>
+        
+        <p class="lead">
+          Vastu Shastra is an ancient Indian architectural science that harmonizes living spaces with natural elements through guidelines on layout, direction, and structure.
+        </p>
+        
+        <button class="read-more-btn" onclick="openVastuModal()">
+          Read More About Vastu
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
-By balancing the five essential elements — Earth, Water, Fire, Air, and Space — Vastu Shastra promotes physical health, mental peace, financial prosperity, and overall well-being. Whether designing a home, office, or any structure, following Vastu principles helps create a positive, vibrant, and supportive environment for a successful life.
-              </p>
-              
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- Vastu Modal -->
+<div id="vastuModal" class="vastu-modal-overlay">
+  <div class="vastu-modal-card">
+    <div class="vastu-modal-header">
+      <h3 class="vastu-modal-title">Understanding Vastu</h3>
+      <button class="vastu-modal-close" onclick="closeVastuModal()">&times;</button>
+    </div>
+    <div class="vastu-modal-body">
+      <p>
+        Vastu Shastra is an ancient Indian science of architecture and design that aims to create harmony between your living space and the natural elements. Rooted in centuries of tradition, it provides guidelines for the layout, direction, and structure of buildings to align with the earth's energies.
+      </p>
+      
+      <p>
+        By balancing the five essential elements — <span class="element earth">Earth</span>, <span class="element water">Water</span>, <span class="element fire">Fire</span>, <span class="element air">Air</span>, and <span class="element space">Space</span> — Vastu Shastra promotes physical health, mental peace, financial prosperity, and overall well-being.
+      </p>
+      
+      <p>
+        Whether designing a home, office, or any structure, following Vastu principles helps create a positive, vibrant, and supportive environment for a successful life.
+      </p>
+      
+      <p>
+        The science of Vastu considers various factors including the magnetic field of the earth, gravitational forces, solar energy, cosmic rays, and the influence of celestial bodies. Each direction has its own significance and energy, which when properly harnessed, can bring tremendous positive changes in one's life.
+      </p>
+      
+      <p>
+        From the placement of rooms and furniture to the selection of colors and materials, every aspect of Vastu Shastra is designed to optimize the flow of positive energy and minimize negative influences, creating spaces that nurture both body and soul.
+      </p>
+      
+      <p>
+        The principles of Vastu are based on the understanding that everything in the universe is connected and influenced by cosmic forces. By aligning our living and working spaces with these natural forces, we can enhance our physical health, mental clarity, emotional stability, and spiritual growth.
+      </p>
+      
+      <p>
+        Modern applications of Vastu Shastra extend beyond traditional homes to include offices, factories, shops, and even urban planning. The timeless wisdom of this ancient science continues to provide valuable insights for creating harmonious and prosperous environments in our contemporary world.
+      </p>
+    </div>
+  </div>
+</div>
 
       <!-- Why Choose Us? -->
       <section id="features">
@@ -651,5 +712,6 @@ By balancing the five essential elements — Earth, Water, Fire, Air, and Space 
     <!-- Script  -->
 
     <script src="script.js"></script>
+    <script src="vastu.js"></script>
   </body>
 </html>

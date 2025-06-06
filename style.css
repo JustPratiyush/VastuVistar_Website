@@ -30,6 +30,8 @@ section {
 /* Logo styling */
 .Logo {
   margin-right: 10px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 /* Main photo styling */
@@ -177,7 +179,112 @@ audio {
   margin-bottom: 5px !important;
 }
 
-/* Make everything responsive */
+/* Enhanced Navbar Styles */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 0.75rem 0;
+}
+
+.navbar-brand {
+  text-decoration: none !important;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.NavTitle {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced Toggle Button */
+.navbar-toggler {
+  border: 2px solid #764ba2;
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.navbar-toggler:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Enhanced Navigation Links */
+.NavIcons {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.NavIcons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.NavIcons:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.NavIcons:hover::before {
+  left: 0;
+}
+
+.NavIcons.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Sticky navbar enhancement */
+.navbar.sticky-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
@@ -191,6 +298,7 @@ audio {
   .section-heading {
     font-size: 2rem;
   }
+
   .Centre {
     display: flex !important;
     justify-content: center !important;
@@ -204,23 +312,78 @@ audio {
   .MainButton {
     max-width: 280px !important;
   }
+
   .button-group {
     justify-content: center !important;
   }
 }
 
-@media (max-width: 464px) {
+/* Mobile navbar styles */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 1.5rem 0;
+    border-top: 2px solid #e9ecef;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-nav {
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0.25rem 0;
+  }
+
   .NavIcons {
-    font-size: 0.8rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    margin: 0 1rem;
+  }
+}
+
+/* Desktop navbar styles */
+@media (min-width: 768px) {
+  .navbar-nav {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+  .NavIcons {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 464px) {
+  .card {
+    min-width: 300px;
+  }
+
+  .accordion-body,
+  .accordion-button {
+    font-size: small;
+  }
+
+  .NavIcons {
+    font-size: 0.9rem;
   }
 
   .NavLogo {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
   }
 
   .NavTitle {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
   }
 
   .NavBox {
