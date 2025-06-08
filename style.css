@@ -373,6 +373,10 @@ html {
     font-size: small;
   }
 
+  .section-heading {
+    font-size: large;
+  }
+
   .NavIcons {
     font-size: 0.9rem;
   }
