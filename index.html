@@ -43,8 +43,9 @@
     />
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Vastu.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   </head>
 
@@ -120,7 +121,7 @@
 
     <!-- Hero Section -->
     
-    <section id="home" class="my-5">
+    <section id="home">
         <div class="container col-xxl-8 px-4">
           <div class="Centre row flex-lg-row-reverse align-items-center g-5">
             <div class="col-10 col-sm-8 col-lg-6">
@@ -177,7 +178,7 @@
             </div>
             <div class="col-lg-7">
               <h2 class="display-5 fw-bold mb-3">About <span class="text-success">Neena Kuchhal</span></h2>
-              <p class="lead text-muted mb-4">Certified Vastu Consultant with 7+ Years of Experience</p>
+              <p class="lead text-muted mb-4">Astro Vastu Consultant with 7+ Years of Experience</p>
               
               <div class="accordion mb-4" id="aboutAccordion">
                 <div class="accordion-item border-0 mb-3 rounded-3 overflow-hidden shadow-sm">
@@ -275,74 +276,174 @@
         </div>
       </section>
 
-<!-- What is Vastu? - Updated with modal -->
-<section id="about" class="my-5">
-  <div class="container col-xxl-8 px-4">
-    <div class="Centre row flex-lg-row align-items-center g-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img
-          src="/assets/images/VastuDeva.webp"
-          class="d-block mx-lg-auto img-fluid MainPhoto"
-          alt="Ancient Vastu Shastra principles represented through traditional imagery"
-          width="700"
-          height="500"
-          loading="lazy"
-        />
+<!-- What is Vastu? Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+        <div class="position-relative">
+          <img
+            src="/assets/images/VastuDeva.webp"
+            class="img-fluid rounded-4 shadow-lg"
+            alt="Ancient Vastu Shastra principles"
+            loading="lazy"
+          />
+          <div class="position-absolute top-0 start-0 w-100 h-100 rounded-4" style="border: 4px solid var(--primary-color); transform: rotate(3deg); z-index: -1;"></div>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <h2 class="Centre display-5 fw-bold text-body-emphasis lh-1 mb-3">
-          What is Vastu?
-        </h2>
-        
-        <p class="lead">
-          Vastu Shastra is an ancient Indian architectural science that harmonizes living spaces with natural elements through guidelines on layout, direction, and structure.
-        </p>
-        
-        <button class="read-more-btn" onclick="openVastuModal()">
-          Read More About Vastu
-        </button>
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+        <div class="ps-lg-5">
+          <span class="text-uppercase text-primary fw-bold d-block mb-2">Ancient Wisdom</span>
+          <h2 class="display-5 fw-bold mb-4">What is <span class="text-success">Vastu Shastra</span>?</h2>
+          
+          <div class="vastu-intro mb-4">
+            <p class="lead">
+              Vastu Shastra is an ancient Indian architectural science that harmonizes living spaces with natural elements through guidelines on layout, direction, and structure.
+            </p>
+            
+            <div class="vastu-elements mt-4 mb-4">
+              <h5 class="mb-3 fw-semibold">The Five Elements</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-earth">Earth</span>
+                <span class="badge bg-water">Water</span>
+                <span class="badge bg-fire">Fire</span>
+                <span class="badge bg-air">Air</span>
+                <span class="badge bg-space">Space</span>
+              </div>
+            </div>
+            
+            <ul class="list-unstyled vastu-features">
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>Enhances positive energy flow</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>Promotes health and well-being</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>Improves relationships and prosperity</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn btn-success btn-lg px-4" onclick="openVastuModal()">
+              <i class="fas fa-book-open me-2"></i> Learn More
+            </button>
+            <a href="#contact" class="btn btn-outline-success btn-lg px-4">
+              <i class="fas fa-calendar-check me-2"></i> Book Consultation
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Vastu Modal -->
-<div id="vastuModal" class="vastu-modal-overlay">
-  <div class="vastu-modal-card">
-    <div class="vastu-modal-header">
-      <h3 class="vastu-modal-title">Understanding Vastu</h3>
-      <button class="vastu-modal-close" onclick="closeVastuModal()">&times;</button>
-    </div>
-    <div class="vastu-modal-body">
-      <p>
-        Vastu Shastra is an ancient Indian science of architecture and design that aims to create harmony between your living space and the natural elements. Rooted in centuries of tradition, it provides guidelines for the layout, direction, and structure of buildings to align with the earth's energies.
-      </p>
-      
-      <p>
-        By balancing the five essential elements — <span class="element earth">Earth</span>, <span class="element water">Water</span>, <span class="element fire">Fire</span>, <span class="element air">Air</span>, and <span class="element space">Space</span> — Vastu Shastra promotes physical health, mental peace, financial prosperity, and overall well-being.
-      </p>
-      
-      <p>
-        Whether designing a home, office, or any structure, following Vastu principles helps create a positive, vibrant, and supportive environment for a successful life.
-      </p>
-      
-      <p>
-        The science of Vastu considers various factors including the magnetic field of the earth, gravitational forces, solar energy, cosmic rays, and the influence of celestial bodies. Each direction has its own significance and energy, which when properly harnessed, can bring tremendous positive changes in one's life.
-      </p>
-      
-      <p>
-        From the placement of rooms and furniture to the selection of colors and materials, every aspect of Vastu Shastra is designed to optimize the flow of positive energy and minimize negative influences, creating spaces that nurture both body and soul.
-      </p>
-      
-      <p>
-        The principles of Vastu are based on the understanding that everything in the universe is connected and influenced by cosmic forces. By aligning our living and working spaces with these natural forces, we can enhance our physical health, mental clarity, emotional stability, and spiritual growth.
-      </p>
-      
-      <p>
-        Modern applications of Vastu Shastra extend beyond traditional homes to include offices, factories, shops, and even urban planning. The timeless wisdom of this ancient science continues to provide valuable insights for creating harmonious and prosperous environments in our contemporary world.
-      </p>
+<div id="vastuModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0">
+      <div class="modal-header bg-success text-white">
+        <h3 class="modal-title fw-bold">Understanding Vastu Shastra</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-lg-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="vastu-modal-img mb-4">
+              <img src="/assets/images/vastu-elements.webp" alt="Vastu Elements" class="img-fluid rounded-3">
+            </div>
+            <h4 class="mb-3">The Five Elements</h4>
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="element-card bg-earth-light p-3 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center"><span class="element-icon bg-earth me-2"></span> Earth</h5>
+                  <p class="mb-0 small">Represents stability and strength, associated with the southwest direction.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="element-card bg-water-light p-3 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center"><span class="element-icon bg-water me-2"></span> Water</h5>
+                  <p class="mb-0 small">Symbolizes purity and clarity, best placed in the northeast direction.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="element-card bg-fire-light p-3 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center"><span class="element-icon bg-fire me-2"></span> Fire</h5>
+                  <p class="mb-0 small">Represents energy and transformation, associated with the southeast.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="element-card bg-air-light p-3 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center"><span class="element-icon bg-air me-2"></span> Air</h5>
+                  <p class="mb-0 small">Signifies movement and communication, connected to the northwest.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="element-card bg-space-light p-3 rounded-3">
+                  <h5 class="d-flex align-items-center"><span class="element-icon bg-space me-2"></span> Space</h5>
+                  <p class="mb-0 small">The fundamental element that holds all others, representing the center.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="vastu-content">
+              <h4 class="mb-3">The Science of Harmonious Living</h4>
+              <p>Vastu Shastra is an ancient Indian science of architecture and design that aims to create harmony between your living space and the natural elements. Rooted in centuries of tradition, it provides guidelines for the layout, direction, and structure of buildings to align with the earth's energies.</p>
+              
+              <h5 class="mt-4 mb-3">Key Principles</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Proper orientation and placement of rooms</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Balance of the five elements</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Optimal use of directions and spaces</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Energy flow optimization</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Harmony with nature's forces</li>
+              </ul>
+              
+              <div class="vastu-benefits mt-4 p-3 rounded-3" style="background-color: rgba(25, 135, 84, 0.05);">
+                <h5 class="mb-3">Benefits of Vastu</h5>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center p-2 bg-white rounded-2">
+                      <i class="fas fa-heart text-danger me-2"></i>
+                      <span>Better Health</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center p-2 bg-white rounded-2">
+                      <i class="fas fa-hand-holding-usd text-success me-2"></i>
+                      <span>Financial Growth</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center p-2 bg-white rounded-2">
+                      <i class="fas fa-home text-primary me-2"></i>
+                      <span>Harmonious Home</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center p-2 bg-white rounded-2">
+                      <i class="fas fa-brain text-info me-2"></i>
+                      <span>Mental Peace</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#contact" class="btn btn-success" data-bs-dismiss="modal">Book a Consultation</a>
+      </div>
     </div>
   </div>
+</div>
 </div>
 
       <!-- Why Choose Us? -->
@@ -424,103 +525,140 @@
       </section>
 
       <!-- Pricing -->
-      <section id="pricing">
+      <section id="pricing" class="py-5">
         <div class="container">
-          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h2 class="display-4 fw-normal text-body-emphasis">
-              Consultation Pricing
+          <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">
+              Consultation Packages
             </h2>
-            <p class="fs-5 text-body-secondary">
-              Choose a consultation plan that suits your needs — whether you need
-              a quick chat, a detailed home review, or an in-person Vastu visit,
-              we've got you covered.
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+              Your journey to a more harmonious space begins with a simple chat. From there, we'll build a personalized Vastu plan that’s just right for you.
             </p>
           </div>
 
-          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="Centre col">
-              <div class="card mb-4 rounded-3 shadow-sm">
-                <div class="card-header py-3">
-                  <h3 class="my-0 fw-normal">Basic Consult</h3>
+          <div class="row g-4">
+            <!-- Basic Consultation -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow">
+                <div class="card-header bg-success text-white py-4 position-relative">
+                  <div class="position-absolute top-0 end-0 m-2">
+                  </div>
+                  <h3 class="h4 text-center mb-0">Basic Consultation</h3>
                 </div>
-                <div class="card-body">
-                  <h4 class="card-title pricing-card-title">
-                    ₹0
-                    <small class="text-body-secondary fw-light">/session</small>
-                  </h4>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li>10-min phone call</li>
-                    <li>WhatsApp chat support</li>
-                    <li>General Vastu tips</li>
-                    <li>Understand your needs</li>
+                <div class="card-body p-4">
+                  <div class="text-center mb-4">
+                    <span class="display-5 fw-bold text-success">₹199</span>
+                    <span class="text-muted">/session</span>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      30-minute video/audio consultation
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Initial Vastu assessment
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Basic remedies & suggestions
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Follow-up email summary
+                    </li>
                   </ul>
-                  <a
-                    href="https://wa.me/919997772887"
-                    class="w-100 btn btn-lg btn-outline-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Book basic consultation"
-                  >
-                    Book Now
+                </div>
+                <div class="card-footer bg-transparent border-0 pb-4 px-4">
+                  <a href="#contact" class="btn btn-success w-100 py-2">
+                    <i class="fas fa-calendar-check me-2"></i>Book Your Call
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="Centre col">
-              <div class="card mb-4 rounded-3 shadow-sm">
-                <div class="card-header py-3">
-                  <h3 class="my-0 fw-normal">Home/Office Consult</h3>
+            <!-- Detailed Analysis -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-white py-4">
+                  <h3 class="h4 text-center mb-0">Detailed Analysis</h3>
+                  <p class="text-center mb-0 small text-muted">(Requires Basic Consultation)</p>
                 </div>
-                <div class="card-body">
-                  <h4 class="card-title pricing-card-title">
-                    ₹3,000+
-                    <small class="text-body-secondary fw-light">/session</small>
-                  </h4>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li>Detailed Vastu analysis</li>
-                    <li>Remedies without demolition</li>
-                    <li>Home or office layout review</li>
-                    <li>1 week follow-up support</li>
+                <div class="card-body p-4">
+                  <div class="text-center mb-4">
+                    <span class="display-5 fw-bold text-success">₹4,999</span>
+                    <span class="text-muted">/analysis</span>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      60-minute detailed consultation
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      In-depth space analysis
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Personalized Vastu solutions
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Comprehensive written report
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      1-week email support
+                    </li>
                   </ul>
-                  <a
-                    href="https://wa.me/919997772887"
-                    class="w-100 btn btn-lg btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Get started with home consultation"
-                  >
-                    Get Started
-                  </a>
+                </div>
+                <div class="card-footer bg-light border-0 py-3 text-center">
+                  <small class="text-muted">Book Basic Consultation first</small>
                 </div>
               </div>
             </div>
 
-            <div class="Centre col">
-              <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                <div class="card-header py-3 text-bg-primary border-primary">
-                  <h3 class="my-0 fw-normal">Premium Visit</h3>
+            <!-- Premium On-Site Visit -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-white py-4">
+                  <h3 class="h4 text-center mb-0">Premium On-Site Visit</h3>
+                  <p class="text-center mb-0 small text-muted">(After Detailed Analysis)</p>
                 </div>
-                <div class="card-body">
-                  <h4 class="card-title pricing-card-title">
-                    ₹15,000+
-                    <small class="text-body-secondary fw-light">/visit</small>
-                  </h4>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li>On-site personal assessment</li>
-                    <li>Detailed Vastu report</li>
-                    <li>Advanced remedies & guidance</li>
-                    <li>Priority follow-up access</li>
+                <div class="card-body p-4">
+                  <div class="text-center mb-4">
+                    <span class="display-5 fw-bold text-success">₹14,999</span>
+                    <span class="text-muted">/visit</span>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      In-person property visit
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Complete Vastu assessment
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Detailed personalized report
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Custom remedies & solutions
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      30-day priority support
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      Follow-up consultation included
+                    </li>
                   </ul>
-                  <a
-                    href="https://wa.me/919997772887"
-                    class="w-100 btn btn-lg btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Contact us for premium visit"
-                  >
-                    Contact Us
-                  </a>
+                </div>
+                <div class="card-footer bg-light border-0 py-3 text-center">
+                  <small class="text-muted">Requires Detailed Analysis first</small>
                 </div>
               </div>
             </div>
@@ -529,90 +667,85 @@
       </section>
 
       <!-- Testimonials -->
-      <section id="testimonials" class="testimonials-container">
-        <h2 class="section-heading testimonials-heading">What Our Clients Say</h2>
+      <section id="testimonials">
+        <div class="container">
+          <h2 class="testimonials-heading">What Our Clients Say</h2>
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                I connected with Neena Ji 3–4 years ago during a tough phase with my health. Her guidance brought remarkable healing and peace to my mind, body, and home.
+              </div>
+              <div class="testimonial-author">
+                <img src="/assets/images/client1.webp" alt="Dr. Ruchi Gupta" class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-info">
+                  <h4>Dr. Ruchi Gupta</h4>
+                  <p>Gynecologist at Raja Ram Hospital</p>
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <audio controls class="mt-3 w-100" style="font-size: 0.8rem;" aria-label="Audio testimonial from Dr. Ruchi Gupta">
+                <source src="/assets/audio/testimonial1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </article>
 
-        <div class="testimonials-grid">
-          <!-- Testimonial Card 1 -->
-          <article class="testimonial-card">
-            <div class="profile-img-container">
-              <img
-                src="/assets/images/client1.webp"
-                alt="Dr. Ruchi Gupta profile picture"
-                class="profile-img"
-                loading="lazy"
-              />
-            </div>
-            <h3 class="testimonial-title">
-              She healed my life, not just my health
-            </h3>
-            <p class="testimonial-text">
-              I connected with Neena Ji 3–4 years ago during a tough phase with my
-              health. Her guidance brought remarkable healing and peace to my
-              mind, body, and home.
-            </p>
-            <p class="testimonial-author">Dr. Ruchi Gupta</p>
-            <div class="testimonial-position">
-              <span>Gynecologist at</span>
-              <span class="company-name">Raja Ram Hospital</span>
-            </div>
-            <audio controls aria-label="Audio testimonial from Dr. Ruchi Gupta">
-              <source src="/assets/audio/testimonial1.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </article>
+            <!-- Testimonial 2 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                She gave simple home improvement tips that fixed my family issue in 7-8 months. I'm very thankful to Neena Kuchhal and Vastu Vistaar for their support.
+              </div>
+              <div class="testimonial-author">
+                <img src="/assets/images/client2.webp" alt="Mr. Nikhil Gupta" class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-info">
+                  <h4>Mr. Nikhil Gupta</h4>
+                  <p>Company Secretary</p>
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <audio controls class="mt-3 w-100" style="font-size: 0.8rem;" aria-label="Audio testimonial from Mr. Nikhil Gupta">
+                <source src="/assets/audio/testimonial2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </article>
 
-          <!-- Testimonial Card 2 -->
-          <article class="testimonial-card">
-            <div class="profile-img-container">
-              <img
-                src="/assets/images/client2.webp"
-                alt="Mr. Nikhil Gupta profile picture"
-                class="profile-img"
-                loading="lazy"
-              />
-            </div>
-            <h3 class="testimonial-title">My family's peace restored</h3>
-            <p class="testimonial-text">
-              She gave simple home improvement tips that fixed my family issue in
-              7-8 months. I'm very thankful to Neena Kuchhal and Vastu Vistaar for
-              their support.
-            </p>
-            <p class="testimonial-author">Mr. Nikhil Gupta</p>
-            <div class="testimonial-position">
-              <span>Professional as</span>
-              <span class="company-name">Company Secretary</span>
-            </div>
-            <audio controls aria-label="Audio testimonial from Mr. Nikhil Gupta">
-              <source src="/assets/audio/testimonial2.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </article>
-
-          <!-- Testimonial Card 3 -->
-          <article class="testimonial-card">
-            <div class="profile-img-container">
-              <img
-                src="/assets/images/client3.webp"
-                alt="Christina Williams profile picture"
-                class="profile-img"
-                loading="lazy"
-              />
-            </div>
-            <h3 class="testimonial-title">Amazing Transformation!</h3>
-            <p class="testimonial-text">
-              Vastu Vistar’s holistic, tailored approach brought positive changes to my factory, boosting both professional growth and personal well-being.
-            </p>
-            <p class="testimonial-author">Mr. Arpit Aggarwal</p>
-            <div class="testimonial-position">
-              <span>Director of</span>
-              <span class="company-name">MetroFrozen Foods Pvt Ltd</span>
-            </div>
-            <audio controls aria-label="Audio testimonial from Christina Williams">
-              <source src="/assets/audio/testimonial3.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </article>
+            <!-- Testimonial 3 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                Vastu Vistar's holistic, tailored approach brought positive changes to my factory, boosting both professional growth and personal well-being.
+              </div>
+              <div class="testimonial-author">
+                <img src="/assets/images/client3.webp" alt="Mr. Arpit Aggarwal" class="testimonial-avatar" loading="lazy">
+                <div class="testimonial-info">
+                  <h4>Mr. Arpit Aggarwal</h4>
+                  <p>Director, MetroFrozen Foods</p>
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <audio controls class="mt-3 w-100" style="font-size: 0.8rem;" aria-label="Audio testimonial from Christina Williams">
+                <source src="/assets/audio/testimonial3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -741,83 +874,77 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
-            <p class="lead text-muted">Have questions or ready to transform your space? Send me a message!</p>
+            <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Get In Touch</h2>
+            <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Have questions about Vastu Shastra or want to schedule a consultation? Send me a message!</p>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
-              <div class="card-body p-5">
-                <form id="contactForm" class="needs-validation" novalidate>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label for="name" class="form-label">Your Name <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control form-control-lg" id="name" required>
-                      <div class="invalid-feedback">Please enter your name.</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                      <input type="email" class="form-control form-control-lg" id="email" required>
-                      <div class="invalid-feedback">Please enter a valid email address.</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="subject" class="form-label">Subject</label>
-                      <input type="text" class="form-control form-control-lg" id="subject">
-                    </div>
-                    <div class="col-12">
-                      <label for="message" class="form-label">Your Message <span class="text-danger">*</span></label>
-                      <textarea class="form-control form-control-lg" id="message" rows="5" required></textarea>
-                      <div class="invalid-feedback">Please enter your message.</div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
-                        <label class="form-check-label small text-muted" for="privacyPolicy">
-                          I agree to the <a href="#" class="text-decoration-none">Privacy Policy</a> and <a href="#" class="text-decoration-none">Terms of Service</a>
-                        </label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-                      </div>
-                    </div>
-                    <div class="col-12 mt-4">
-                      <button class="btn btn-success btn-lg px-5" type="submit">
-                        <i class="fas fa-paper-plane me-2"></i>Send Message
-                      </button>
+            <form id="contactForm" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <label for="name" class="form-label">Your Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="name" name="name" required minlength="2" maxlength="50">
+                  <div class="invalid-feedback">
+                    Please enter your name (2-50 characters).
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+                  <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                  <label for="phone" class="form-label">Phone Number (Optional)</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}">
+                  <div class="form-text">Include country code if outside India</div>
+                  <div class="invalid-feedback">
+                    Please enter a valid 10-digit phone number.
+                  </div>
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-delay="350">
+                  <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                  <select class="form-select" id="subject" name="subject" required>
+                    <option value="" selected disabled>Select a subject</option>
+                    <option value="vastu-consultation">Vastu Consultation</option>
+                    <option value="vastu-for-home">Vastu for Home</option>
+                    <option value="vastu-for-office">Vastu for Office</option>
+                    <option value="vastu-for-shop">Vastu for Shop/Showroom</option>
+                    <option value="vastu-for-plot">Vastu for Plot/Land</option>
+                    <option value="other">Other Inquiry</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a subject.
+                  </div>
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                  <label for="message" class="form-label">Your Message <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required minlength="10" maxlength="1000"></textarea>
+                  <div class="form-text">Please provide details about your property and specific concerns</div>
+                  <div class="invalid-feedback">
+                    Please enter your message (10-1000 characters).
+                  </div>
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-delay="450">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                    <label class="form-check-label" for="privacyPolicy">
+                      I agree to the <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a> <span class="text-danger">*</span>
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree to the privacy policy before submitting.
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col-md-4 text-center mb-4 mb-md-0">
-                <div class="icon-box bg-white p-4 rounded-3 h-100">
-                  <div class="icon-circle bg-success bg-opacity-10 text-success mb-3 mx-auto">
-                    <i class="fas fa-phone-alt fa-2x"></i>
-                  </div>
-                  <h5 class="h6 mb-2">Call Me</h5>
-                  <p class="mb-0"><a href="tel:+919997772887" class="text-decoration-none">+91 99977 72887</a></p>
+                </div>
+                <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+                  <button class="btn btn-success btn-lg px-5" type="submit">
+                    <span class="button-text">Send Message</span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  </button>
                 </div>
               </div>
-              <div class="col-md-4 text-center mb-4 mb-md-0">
-                <div class="icon-box bg-white p-4 rounded-3 h-100">
-                  <div class="icon-circle bg-success bg-opacity-10 text-success mb-3 mx-auto">
-                    <i class="fas fa-envelope fa-2x"></i>
-                  </div>
-                  <h5 class="h6 mb-2">Email Me</h5>
-                  <p class="mb-0"><a href="mailto:neenakuchhal@gmail.com" class="text-decoration-none">neenakuchhal@gmail.com</a></p>
-                </div>
-              </div>
-              <div class="col-md-4 text-center">
-                <div class="icon-box bg-white p-4 rounded-3 h-100">
-                  <div class="icon-circle bg-success bg-opacity-10 text-success mb-3 mx-auto">
-                    <i class="fas fa-map-marker-alt fa-2x"></i>
-                  </div>
-                  <h5 class="h6 mb-2">Location</h5>
-                  <p class="mb-0">Roorkee, Uttarakhand, India</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            </form>
         </div>
       </div>
     </section>
@@ -838,35 +965,67 @@
       </div>
     </div>
 
-    <script>
-      // Form validation and submission
-      (function () {
-        'use strict'
-        
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-        
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-          .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-              } else {
-                event.preventDefault()
-                // Here you would typically send the form data to your server
-                // For now, we'll just show the success modal
-                var successModal = new bootstrap.Modal(document.getElementById('successModal'))
-                successModal.show()
-                form.reset()
-              }
-              
-              form.classList.add('was-validated')
-            }, false)
-          })
-      })()
-    </script>
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyPolicyModalLabel">Privacy Policy</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6 class="fw-bold mb-3">Effective Date: January 1, 2025</h6>
+            
+            <p>Vastu Vistar is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by Vastu Vistar.</p>
+            
+            <h6 class="mt-4 fw-bold">1. Information We Collect</h6>
+            <p>We collect information that you provide directly to us, including:</p>
+            <ul>
+              <li>Contact information (name, email address, phone number)</li>
+              <li>Property details you share during consultations</li>
+              <li>Payment information for services</li>
+              <li>Communications between you and Vastu Vistar</li>
+            </ul>
+            
+            <h6 class="mt-4 fw-bold">2. How We Use Your Information</h6>
+            <p>We may use your information to:</p>
+            <ul>
+              <li>Provide and improve our Vastu consultation services</li>
+              <li>Process payments and send related information</li>
+              <li>Respond to your comments, questions, and requests</li>
+              <li>Send you technical notices and support messages</li>
+              <li>Communicate with you about products, services, and events</li>
+            </ul>
+            
+            <h6 class="mt-4 fw-bold">3. Information Sharing</h6>
+            <p>We do not sell or rent your personal information. We may share information with:</p>
+            <ul>
+              <li>Service providers who perform services on our behalf</li>
+              <li>When required by law or to protect rights and safety</li>
+              <li>In connection with any merger or sale of company assets</li>
+            </ul>
+            
+            <h6 class="mt-4 fw-bold">4. Data Security</h6>
+            <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
+            
+            <h6 class="mt-4 fw-bold">5. Your Choices</h6>
+            <p>You may update or delete your information by contacting us. You can opt-out of marketing communications by following the unsubscribe link in our emails.</p>
+            
+            <h6 class="mt-4 fw-bold">6. Changes to This Policy</h6>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
+            
+            <h6 class="mt-4 fw-bold">7. Contact Us</h6>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p>Email: neenakuchhal@gmail.com<br>
+            Phone: +91 99977 72887</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="acceptPrivacyPolicy">I Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -940,25 +1099,24 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
+      defer
     ></script>
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
     <!-- Vercel Analytics -->
     <script>
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments);
-        };
+      window.va = window.va || function(){(window.vaq=window.vaq||[]).push(arguments)};
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 
-    <!-- Script  -->
-
-    <script src="script.js"></script>
-    <script src="vastu.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>
