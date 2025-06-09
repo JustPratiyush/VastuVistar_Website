@@ -9,15 +9,11 @@
   --border-radius: 0.5rem;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-
-  /* Element Colors */
   --color-earth: #795548;
   --color-water: #0074d9;
   --color-fire: #ff4444;
   --color-air: #87ceeb;
   --color-space: #673ab6;
-
-  /* Responsive Breakpoints */
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
@@ -69,20 +65,31 @@ a:hover {
   h1 {
     font-size: 2.5rem;
   }
+
   h2 {
     font-size: 2rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1.5rem;
   }
+
   h5 {
     font-size: 1.25rem;
   }
+
   h6 {
     font-size: 1rem;
+  }
+  .vastu-deva-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 2rem auto;
   }
 }
 
@@ -90,20 +97,74 @@ a:hover {
   h1 {
     font-size: 3rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 2rem;
   }
+
   h4 {
     font-size: 1.75rem;
   }
+
   h5 {
     font-size: 1.5rem;
   }
+
   h6 {
     font-size: 1.25rem;
+  }
+
+  /* Center MainPhoto on tablet screens */
+  #home .Centre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #home .MainPhoto,
+  .vastu-deva-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  #home .button-group {
+    justify-content: center;
+  }
+
+  /* Pricing cards layout for tablet */
+  #pricing .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+
+  #pricing .col-md-4 {
+    flex: 0 0 auto;
+    width: 30%;
+    min-width: 300px;
+    margin-right: 1rem;
+  }
+
+  #pricing .card {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* Hide horizontal scrollbar */
+  #pricing .row::-webkit-scrollbar {
+    display: none;
+  }
+
+  #pricing .row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
@@ -111,18 +172,23 @@ a:hover {
   h1 {
     font-size: 3.5rem;
   }
+
   h2 {
     font-size: 3rem;
   }
+
   h3 {
     font-size: 2.5rem;
   }
+
   h4 {
     font-size: 2rem;
   }
+
   h5 {
     font-size: 1.75rem;
   }
+
   h6 {
     font-size: 1.5rem;
   }
@@ -142,16 +208,19 @@ a:hover {
     max-width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -187,7 +256,6 @@ section {
 }
 
 /* ===== COMPONENTS ===== */
-
 /* Navigation */
 .navbar {
   padding: 1rem 0;
@@ -303,9 +371,11 @@ section {
 .icon1 {
   background-color: rgb(255, 85, 113) !important;
 }
+
 .icon2 {
   background-color: rgb(255, 170, 0) !important;
 }
+
 .icon3 {
   background-color: rgb(0, 170, 255) !important;
 }
@@ -322,7 +392,6 @@ section {
 }
 
 /* ===== SECTIONS ===== */
-
 /* Hero Section */
 #home {
   padding: 6rem 0 8rem;
@@ -392,6 +461,7 @@ section {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -402,6 +472,7 @@ section {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -439,18 +510,22 @@ section {
   background-color: #795548;
   color: white;
 }
+
 .bg-water {
   background-color: #2196f3;
   color: white;
 }
+
 .bg-fire {
   background-color: #f44336;
   color: white;
 }
+
 .bg-air {
   background-color: #00bcd4;
   color: white;
 }
+
 .bg-space {
   background-color: #673ab7;
   color: white;
@@ -461,6 +536,7 @@ section {
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
 .vastu-features i {
   position: absolute;
   left: 0;
@@ -473,13 +549,16 @@ section {
   border-radius: 12px;
   overflow: hidden;
 }
+
 .modal#vastuModal .modal-header {
   border-bottom: none;
   padding: 1.5rem 2rem;
 }
+
 .modal#vastuModal .modal-body {
   padding: 2rem;
 }
+
 .modal#vastuModal .modal-footer {
   border-top: none;
   padding: 1.5rem 2rem;
@@ -547,12 +626,15 @@ section {
 .element-card.bg-water-light {
   background-color: var(--color-water);
 }
+
 .element-card.bg-fire-light {
   background-color: var(--color-fire);
 }
+
 .element-card.bg-air-light {
   background-color: var(--color-air);
 }
+
 .element-card.bg-space-light {
   background-color: var(--color-space);
 }
@@ -735,25 +817,32 @@ footer .bi:hover {
     padding: 5rem 0 6rem;
     text-align: center;
   }
+
   #home .col-lg-6 {
     text-align: center;
   }
+
   #home .button-group {
     justify-content: center;
   }
+
   #home h1 {
     font-size: 2.8rem;
   }
+
   #home .lead {
     margin-left: auto;
     margin-right: auto;
   }
+
   #about {
     text-align: center;
   }
+
   .vastu-intro {
     padding: 0 1rem;
   }
+
   .d-flex.flex-wrap.gap-2 {
     justify-content: center;
   }
@@ -763,6 +852,7 @@ footer .bi:hover {
   .Centre {
     text-align: center;
   }
+
   .MainPhoto {
     width: 100%;
     height: auto;
@@ -771,18 +861,22 @@ footer .bi:hover {
   #home {
     padding: 4rem 0 6rem;
   }
+
   #home .Centre {
     flex-direction: column;
     text-align: center;
   }
+
   #home .MainPhoto {
     width: 100%;
     max-width: 400px;
     margin: 2rem auto;
   }
+
   #home h1 {
     font-size: 2.5rem;
   }
+
   #home .lead {
     font-size: 1.1rem;
   }
@@ -796,6 +890,7 @@ footer .bi:hover {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .testimonial-card {
     padding: 1.5rem;
   }
@@ -810,9 +905,11 @@ footer .bi:hover {
   .modal-dialog {
     margin: 0.5rem;
   }
+
   .modal-content {
     border-radius: 0.3rem;
   }
+
   .modal-body {
     padding: 1rem;
   }
@@ -821,12 +918,15 @@ footer .bi:hover {
     padding: 1rem;
     text-align: center;
   }
+
   .element-card h5 {
     font-size: 1.25rem;
   }
+
   .element-card p {
     font-size: 0.875rem;
   }
+
   .element-svg {
     width: 20px;
     height: 20px;
@@ -836,14 +936,17 @@ footer .bi:hover {
     text-align: center;
     padding: 2rem 0;
   }
+
   footer .d-flex {
     flex-direction: column;
     gap: 1rem;
   }
+
   footer .col-md-4 {
     width: 100%;
     margin-bottom: 1rem;
   }
+
   footer .justify-content-end {
     justify-content: center !important;
   }
