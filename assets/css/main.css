@@ -9,6 +9,13 @@
   --border-radius: 0.5rem;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+
+  /* Element Colors */
+  --color-earth: #795548;
+  --color-water: #0074d9;
+  --color-fire: #ff4444;
+  --color-air: #87ceeb;
+  --color-space: #673ab6;
 }
 
 * {
@@ -22,6 +29,61 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.vastu-element-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.element-svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* Element Cards */
+.element-card {
+  transition: var(--transition);
+  color: white;
+  background-color: var(--color-earth);
+}
+
+.element-card.bg-water-light {
+  background-color: var(--color-water);
+}
+
+.element-card.bg-fire-light {
+  background-color: var(--color-fire);
+}
+
+.element-card.bg-air-light {
+  background-color: var(--color-air);
+}
+
+.element-card.bg-space-light {
+  background-color: var(--color-space);
+}
+
+.element-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+/* Element Text Colors */
+.element-card h5 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.element-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  font-size: 0.875rem;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -497,21 +559,6 @@ section {
   display: inline-block;
   flex-shrink: 0;
 }
-.bg-earth-light {
-  background-color: rgba(121, 85, 72, 0.08);
-}
-.bg-water-light {
-  background-color: rgba(33, 150, 243, 0.08);
-}
-.bg-fire-light {
-  background-color: rgba(244, 67, 54, 0.08);
-}
-.bg-air-light {
-  background-color: rgba(0, 188, 212, 0.08);
-}
-.bg-space-light {
-  background-color: rgba(103, 58, 183, 0.08);
-}
 
 /* Vastu Features List */
 .vastu-features li {
@@ -670,12 +717,24 @@ section {
   border-bottom: 1px solid #e9ecef;
   padding: 1.5rem;
   background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.modal-header .btn-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .modal-title {
   font-weight: 600;
-  color: #212529;
+  color: white;
   margin: 0;
+  text-align: center;
 }
 
 .modal-body {
